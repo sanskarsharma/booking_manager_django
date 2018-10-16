@@ -1,0 +1,6 @@
+.idea/
+virtualenv/
+booking_manager/database.cnf
+booking_manager/booking_manager/__pycache__/
+booking_manager/booking_manager_app/__pycache__/
+booking_manager/booking_manager_app/migrations/__pycache__/
