@@ -51,10 +51,3 @@ class ScreenView(APIView):
         screen_serialized = ScreenSerializer(screen).data
         return Response(screen_serialized)
 
-class SeatListView(APIView):
-
-
-
-
-
-
