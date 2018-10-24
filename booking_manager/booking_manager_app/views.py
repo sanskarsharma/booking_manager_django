@@ -10,6 +10,10 @@ from .serializers import ScreenSerializer, SeatSerializer
 import json
 
 
+def app_home(request):
+    return render(request, "booking_manager_app/home.html")
+
+
 class ScreenListView(APIView):
 
     def get(self, request):
@@ -50,4 +54,24 @@ class ScreenView(APIView):
             return Response(response_dict, status=HTTP_404_NOT_FOUND)
         screen_serialized = ScreenSerializer(screen).data
         return Response(screen_serialized)
+
+
+class SeatView(APIView):
+
+    def get(self, request, screen_id, seat_id ):
+
+        """ GET - show details about a seat """
+        pass
+
+
+"""
+    TODO : 
+    - api for bulk booking seats of a screen
+    - api for showing seats/with status of a screen
+    - api for initializing a screen with seats setup info
+    - screen META data api for convenience /status of seats in a screen
+    - api
+
+"""
+
 

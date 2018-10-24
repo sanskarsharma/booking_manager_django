@@ -22,6 +22,10 @@ class Seat(DateTimeBase):
     is_aisle_seat = models.BooleanField(default=False)
     is_reserved = models.BooleanField(default=False)
 
+    class Meta:
+        unique_together = ["screen", "seat_number", "row"]
+
+
 
 
 
